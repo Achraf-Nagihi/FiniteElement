@@ -1,9 +1,9 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %  Programme de résolution d'equation différentielle aux dérivées  %
+  %  Programme de rÃ©solution d'equation diffÃ©rentielle aux dÃ©rivÃ©es  %
   %  partielles    -alpha*u"+beta*u=f       sur le domaine           %
   %                       u=0               condition au bord        %
   %                                                                  %
-  %      Réalisé par : MOUTATAHIR younes et TRADY jamal              %
+  %      RÃ©alisÃ© par :              %
   %                                                                  %
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,9 +21,9 @@ x1=-1.5;y1=0;x2=0;y2=0;x3=0;y3=1;x4=-1.5;y4=1;h=0.06;
 [ p2,t2,b2 ] = maillage2DP2( p,t,e );
 [ A,F ] = assemblage2Dp2( alpha,beta,f,p2,t2,b2 );
 
-U=A\F    %le vecteur de la solution approchée
-x=p2(1,:);  % les coodonées x
-y=p2(2,:);% les coordonées y
+U=A\F    %le vecteur de la solution approchÃ©e
+x=p2(1,:);  % les coodonÃ©es x
+y=p2(2,:);% les coordonÃ©es y
 UE=arrayfun(g,x,y);   %le vecteur solution exacte
 ER=U-UE';   % le vecteur erreur pour verifier l'exactitude du programme
 
@@ -33,7 +33,7 @@ tri = delaunay(x,y);
 trisurf(tri,x,y,U);
 title('Representation de la solution approchee en P2')
 
-%on peut aussi dessiner la fonction exacte pour la comparer avec l'approchée
+%on peut aussi dessiner la fonction exacte pour la comparer avec l'approchÃ©e
 
 figure(2);
 trisurf(tri,x,y,UE);
